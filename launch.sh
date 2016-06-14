@@ -26,7 +26,7 @@ else
 	JAVA_OPTS="$JAVA_OPTS -Dhazelcast.group.name -Dhazelcast.group.password"
 fi
 
-JAR="$HZ_HOME/hazelcast-all-$HZ_VERSION.jar"
+JAR="$HZ_HOME/hazelcast-all-$HZ_VERSION.jar:$HZ_HOME/cache-api-1.0.0.jar"
 if [ ! -e "$JAR" ]; then
 	echo "Failed to find Hazelcast JAR file at $JAR"
 	exit 1
